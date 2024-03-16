@@ -1,0 +1,95 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #000000; /* Dark background */
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+  color: #dbd800; /* Green title */
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 80%;
+  padding: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #ffffff; /* Dark input background */
+  color: #000000; /* White text color */
+}
+
+#search-input:focus {
+  outline: none;
+}
+
+#search-button {
+  padding: 10px 20px;
+  background-color: #dbd800; /* Green button background */
+  border: none;
+  border-radius: 5px;
+  color: #fff; /* White text color */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.wallpaper-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.wallpaper-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.wallpaper-item:hover img {
+  transform: scale(1.05);
+}
+
+.download-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.wallpaper-item:hover .download-btn {
+  opacity: 1;
+}
